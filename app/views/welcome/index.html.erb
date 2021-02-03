@@ -1,4 +1,10 @@
 <div class="container text-center">
-  Hello World
-  <% require "pry"; binding.pry %>
+  <div class="container text-center">
+    Welcome <%= @users.current_user.username %>
+    <%= link_to "LinkedIn", "https://www.linkedin.com/in/dtt/", target: "_blank"%>
+    <%= link_to "GitHub", "https://github.com/DavidTTran", target: "_blank"%>
+    <%= link_to "Portfolio Repo", "https://github.com/DavidTTran/portfolio", target: "_blank"%>
+  </div>
+  <%= @users.count %> unique visitors!
+  Leave a suggestion or message! <%= link_to "Authenticate with GitHub", sign_in_path %>
 </div>
