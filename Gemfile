@@ -20,7 +20,8 @@ gem 'pry'
 gem 'ahoy_matey'
 gem 'jquery-rails'
 gem 'bootstrap'
-gem 'fast_jsonapi'
+gem 'jsonapi-serializer'
+gem 'omniauth-github'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

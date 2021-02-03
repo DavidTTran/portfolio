@@ -90,8 +90,6 @@ GEM
     errbase (0.2.0)
     erubi (1.9.0)
     execjs (2.7.0)
-    fast_jsonapi (1.5)
-      activesupport (>= 4.2)
     ffi (1.13.1)
     geocoder (1.6.3)
     globalid (0.4.2)
@@ -104,6 +102,8 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jsonapi-serializer (2.1.0)
+      activesupport (>= 4.2)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -233,9 +233,9 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara
-  fast_jsonapi
   jbuilder (~> 2.7)
   jquery-rails
+  jsonapi-serializer
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   pry
