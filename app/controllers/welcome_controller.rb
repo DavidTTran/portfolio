@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
     else
       current_user = User.find_by_visitor_id(current_visit.visitor_token)
     end
-    @current_user = UserSerializer.new(current_user)
+    @users = Users.new(current_user)
   end
 
   def new
