@@ -4,7 +4,7 @@ class SessionController < ApplicationController
   end
 
   def create
-
+    require "pry"; binding.pry
   end
 
   def destroy
