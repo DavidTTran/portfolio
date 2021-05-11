@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="application.css">
+  </head>
+
+  <body>
+    <div class="title box-1">
+      GitHub
+      <div class="info">
+        <a href="https://github.com/DavidTTran" target="_blank">GitHub.com/DavidTTran</a>
+      </div>
+    </div>
+    <div class="title box-2">
+      LinkedIn
+      <div class="info">
+        <a href="https://www.linkedin.com/in/dtt/" target="_blank">LinkedIn.com/DTT</a>
+      </div>
+    </div>
+    <div class="title box-3">
+      Personals
+      <div class="info">
+        Resume: <%= link_to "Click to Download", asset_path("David_Tran_Resume.pdf"), download: "DavidTTran_resume.pdf" %><br>
+        Email: <%= mail_to "DavidTTemail@gmail.com" %><br>
+        Phone-Number: 720-879-1709<br>
+      </div>
+    </div>
+  </body>
+</html>
