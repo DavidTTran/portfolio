@@ -28,35 +28,59 @@ body {
   overflow: hidden;
 }
 
-.notice {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: white;
-  font-family: "New Tegomin";
-  font-size: 50px;
+a {
+  color: #c3cefc;
 }
 
 .welcome {
   color: white;
-  margin: auto;
+  font-family: "New Tegomin";
+  font-size: 30px;
+  top: 15%;
+  left: 40%;
+  position: absolute;
+  text-align: center;
+}
+
+.title {
+  color: #c3cefc;
+  font-family: "New Tegomin";
+  font-size: 50px;
+  width: 500px;
+  position: absolute;
 }
 
 .info {
-  position: absolute;
-  top: 60%;
-  left: 50%;
+  position: relative;
+  text-align: left;
+  right: 0;
   color: white;
   font-size: 16px;
-  width: 25%;
   font-family: "Arial"
+}
+
+.box-1 {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+}
+
+.box-2 {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+
+.box-3 {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
 }
 
 #background-image {
   width: 200px;
   height: 200px;
   opacity: 50%;
-  
 }
 
 /* SIDEBAR */
