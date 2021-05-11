@@ -13,3 +13,142 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+body {
+  background: linear-gradient(43deg, black 65%, #c3cefc) no-repeat;
+  display: flex;
+  height: 100vh;
+  width: 80%;
+  right: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.notice {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: white;
+  font-family: "New Tegomin";
+  font-size: 50px;
+}
+
+.welcome {
+  color: white;
+  margin: auto;
+}
+
+.info {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  color: white;
+  font-size: 16px;
+  width: 25%;
+  font-family: "Arial"
+}
+
+#background-image {
+  width: 200px;
+  height: 200px;
+  opacity: 50%;
+  
+}
+
+/* SIDEBAR */
+
+sidebar {
+  width: 80px;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 0px 7px #c3cefc;
+}
+
+sidebar .logo {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+}
+
+sidebar .menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+sidebar a {
+  color: #c3cefc;
+  font-size: 25px;
+  padding: 20px;
+}
+
+/* Glitch Animation */
+
+.glitch-animation {
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,255) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg);
+  }
+}
+
+div:before,
+div:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+div:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg);
+  }
+}
+
+div:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg);
+  }
+}
