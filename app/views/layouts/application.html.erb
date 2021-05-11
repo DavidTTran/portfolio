@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portfolio</title>
+    <title>DavidTTran</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
+    <img src="/assets/d20.gif" id="background-image">
+
     <sidebar>
       <div class="logo">
         <a href="/index"><img src="/assets/d20.gif" style="width:50px;height:50px"></a>
@@ -18,10 +21,10 @@
         <a href="/">
           <i class="fa fa-home"></i>
         </a>
-        <a href="/about-me">
+        <a href="/about">
           <i class="fa fa-user"></i>
         </a>
-        <a href="/open-ai">
+        <a href="/openai">
           <i class="fa fa-android"></i>
         </a>
         <a href="/contact">
@@ -29,7 +32,7 @@
         </a>
       </div>
     </sidebar>
-    
+
     <%= yield %>
   </body>
 </html>

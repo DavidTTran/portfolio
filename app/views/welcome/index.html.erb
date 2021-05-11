@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>DavidTTran</title>
-    <link rel="stylesheet" href="application.css">
-  </head>
 
   <body>
     <div class="welcome">
       Welcome <%= @visitor.current_user.username %>!
-      <%= @visitor.count_of_visitors %> unique visitors.
+      <div class="visitors">
+        <%= @visitor.count_of_visitors %> unique visitors.
+      </div>
     </div>
-
-    <img src="/assets/d20.gif" id="background-image">
-    <div class="notice glitch-animation" title="Under Construction">Under Construction</div>
-    <div class="info">
-      First and foremost - I'm a backend engineer.. I can (and have) spent hours fiddling with CSS for lackluster results. So, instead, I implemented some functionality.
+    <div class="title box-1">
+      <div class="glitch-animation" title="Under Construction">
+        Under Construction
+      </div>
+      <div class="info">
+        First and foremost - I'm a backend engineer.. I can (and have) spent hours fiddling with CSS for lackluster results. So, instead, I opted for functionality. Such as, identifying unique users, GitHub oauth, and eventually I'll incorporate comments and <a href="https://beta.openai.com/docs/introduction/key-concepts" target="_blank">OpenAI.</a>
+      </div>
     </div>
   </body>
 </html>
