@@ -7,6 +7,11 @@
   </head>
 
   <body>
+    <div class="welcome">
+      Welcome <%= @visitor.current_user.username %>!
+      <%= @visitor.count_of_visitors %> unique visitors.
+    </div>
+
     <img src="/assets/d20.gif" id="background-image">
     <div class="notice glitch-animation" title="Under Construction">Under Construction</div>
     <div class="info">
