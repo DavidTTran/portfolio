@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <body>
     <div class="welcome">
       Welcome <%= @visitor.current_user.username %>!
       <div class="visitors">
-        <%= @visitor.count_of_visitors %> unique visitors.
+        <%= @visitor.count_of_visitors %> unique visitors.<br>
+        <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a>
       </div>
     </div>
     <div class="title box-1">
