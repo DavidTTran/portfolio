@@ -20,13 +20,14 @@
   width: 200px;
   height: 200px;
   opacity: 50%;
+  position: absolute;
+  left: 30%;
 }
 
 body {
   background: linear-gradient(43deg, black 65%, #c3cefc) no-repeat;
   display: flex;
   height: 100vh;
-  width: 80%;
   right: 0;
   margin: 0;
   align-items: center;
@@ -109,12 +110,28 @@ a {
 /* COMMENTS */
 
 .comments {
+  width: 30%;
+  margin: auto;
+}
+
+.comment {
+  position: relative;
+  box-shadow: -3px 3px 5px #c3cefc;
+  padding-left: 4px;
+  padding-top: 1px;
+  min-height: 80px;
+  list-style-type: none;
+  color: white;
+}
+
+.comment-author {
+  color: #c3cefc;
+}
+
+.comment-create {
   position: absolute;
-  background-color: white;
-  left: 50%;
-  width: 50%;
-  margin: 0;
-  height: 30px;
+  right: 4px;
+  bottom: 0;
 }
 
 

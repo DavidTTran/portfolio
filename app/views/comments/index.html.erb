@@ -11,10 +11,16 @@
     </div>
     <div class="comments">
       <% @comments.each do |comment| %>
-        <%= comment.author %>
-        <%= comment.body %>
-        <%= comment.created_at.to_date %>
+        <li class="comment">
+          <ul class="comment-author">
+            <%= comment.author %>
+          </ul>
+          <%= comment.body %>
+          <div class="comment-create">
+            <%= comment.created_at.to_date %>
+          </div>
       <% end %>
+      </li>
     </div>
   </body>
 </html>
