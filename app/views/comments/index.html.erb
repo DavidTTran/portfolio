@@ -12,6 +12,8 @@
     <div class="comments">
       <% @comments.each do |comment| %>
         <%= comment.author %>
+        <%= comment.body %>
+        <%= comment.created_at.to_date %>
       <% end %>
     </div>
   </body>
