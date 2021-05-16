@@ -13,7 +13,7 @@
       <% @comments.each do |comment| %>
         <li class="comment">
           <ul class="comment-author">
-            <%= comment.author %>
+            <%= comment.author.username %>
           </ul>
           <%= comment.body %>
           <div class="comment-create">

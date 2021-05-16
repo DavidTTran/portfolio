@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
 
   def author
-    User.find(self.user_id).username
+    User.find(self.user_id)
   end
 end
