@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
-    <div class="welcome">
-      Welcome <%= @visitor.current_user.username %>!
-      <div class="visitors">
-        <%= @visitor.count_of_visitors %> unique visitors.<br>
-        <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a>
+    <div class="container">
+      <div class="welcome">
+        Welcome <%= @visitor.current_user.username %>!
+        <div class="visitors">
+          <%= @visitor.count_of_visitors %> unique visitors.<br>
+          <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a>
+        </div>
       </div>
-    </div>
-    <div class="title box-1">
-      <div class="glitch-animation" title="Under Construction">
-        Under Construction
-      </div>
-      <div class="info">
-        First and foremost - I'm a backend engineer.. I can (and have) spent hours fiddling with CSS for lackluster results. So, instead, I opted for functionality. Such as, identifying unique users, GitHub oauth, and eventually I'll incorporate comments and <a href="https://beta.openai.com/docs/introduction/key-concepts" target="_blank">OpenAI.</a>
+      <div class="title box-1">
+        <div class="notice">
+          Hover over me!
+        </div>
+        <div class="glitch-animation" title="Under Construction">
+          Under Construction
+        </div>
+        <div class="info">
+          First and foremost - I'm a junior backend engineer, with few presentable projects of my own to speak for. I can (and have) spent hours fiddling with CSS for lackluster results. So, instead, I opted for functionality on this portfolio site. Such as, identifying unique users, GitHub oauth, and eventually I'll incorporate comments and <a href="https://beta.openai.com/docs/introduction/key-concepts" target="_blank">OpenAI.</a>
+        </div>
       </div>
     </div>
   </body>
