@@ -10,6 +10,6 @@ class Visitor
   end
 
   def oauth(params)
-    GithubService.call(params)
+    data = GithubService.new.call(params)
   end
 end
