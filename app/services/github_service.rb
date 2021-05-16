@@ -1,36 +1,41 @@
 class GithubService
-  def self.call(params)
-    require "pry"; binding.pry
-    client_id = ENV["CLIENT_ID"]
-    client_secret = ENV["GITHUB_SECRET"]
-    code = params[:code]
+  def call(params)
+    params = github_params(params)
 
-    conn = Faraday.new(url: 'https://github.com', headers: {'Accept': 'application/json'})
-
-    response = conn.post('/login/oauth/access_token') do |req|
-      req.params['code'] = code
-      req.params['client_id'] = client_id
-      req.params['client_secret'] = client_secret
+    response = establish_conn.post('/login/oauth/access_token') do |req|
+      req.params['code'] = params[:code]
+      req.params['client_id'] = params[:client_id]
+      req.params['client_secret'] = params[:client_secret]
     end
 
-    data = JSON.parse(response.body, symbolize_names: true)
-    access_token = data[:access_token]
+    access_token = access_token(response.body)
 
-    conn = Faraday.new(
+    response = user_conn(access_token).get('/user')
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  private
+
+  def github_params(params)
+    { code: params[:code],
+      client_id: ENV["CLIENT_ID"],
+      client_secret: ENV["GITHUB_SECRET"]}
+  end
+
+  def access_token(data)
+    JSON.parse(data)["access_token"]
+  end
+
+  def establish_conn
+    Faraday.new(url: 'https://github.com', headers: {'Accept': 'application/json'})
+  end
+
+  def user_conn(access_token)
+    Faraday.new(
       url: 'https://api.github.com',
       headers: {
           'Authorization': "token #{access_token}"
       }
     )
-    response = conn.get('/user')
-    data = JSON.parse(response.body, symbolize_names: true)
-  end
-
-  def establish_conn
-
-  end
-
-  def return_conn
-
   end
 end
