@@ -116,7 +116,7 @@ a {
 
 .comment {
   position: relative;
-  box-shadow: -3px 3px 5px #c3cefc;
+  box-shadow: -3px 3px 4px #c3cefc;
   padding-left: 4px;
   padding-top: 1px;
   min-height: 80px;
@@ -126,12 +126,15 @@ a {
 
 .comment-author {
   color: #c3cefc;
+  font-family: "New Tegomin";
+  font-size: 16px;
 }
 
 .comment-create {
   position: absolute;
   right: 4px;
   bottom: 0;
+  font-size: 12px;
 }
 
 
