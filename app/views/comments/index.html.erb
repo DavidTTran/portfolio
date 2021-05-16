@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="application.css">
+  </head>
+
+  <body>
+    <div class="main">
+      <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a><br>
+    </div>
+    <div class="comments">
+      <% @comments.each do |comment| %>
+        <%= comment.author %>
+      <% end %>
+    </div>
+  </body>
+</html>

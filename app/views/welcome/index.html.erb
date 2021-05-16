@@ -2,11 +2,11 @@
 <html lang="en">
   <body>
     <div class="container">
-      <div class="welcome">
+      <div class="main">
         Welcome <%= @visitor.current_user.username %>!
         <div class="visitors">
           <%= @visitor.count_of_visitors %> unique visitors.<br>
-          <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a>
+          <a href="https://github.com/DavidTTran/portfolio">View the code for this site!</a>
         </div>
       </div>
       <div class="title box-1">
