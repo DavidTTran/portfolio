@@ -16,6 +16,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
+#background-image {
+  width: 200px;
+  height: 200px;
+  opacity: 50%;
+}
+
 body {
   background: linear-gradient(43deg, black 65%, #c3cefc) no-repeat;
   display: flex;
@@ -26,6 +32,10 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+a {
+  color: #c3cefc;
 }
 
 .container:hover .title {
@@ -40,11 +50,7 @@ body {
   opacity: 1;
 }
 
-a {
-  color: #c3cefc;
-}
-
-.welcome {
+.main {
   color: white;
   font-family: "New Tegomin";
   font-size: 30px;
@@ -100,11 +106,17 @@ a {
   right: 10%;
 }
 
-#background-image {
-  width: 200px;
-  height: 200px;
-  opacity: 50%;
+/* COMMENTS */
+
+.comments {
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  width: 50%;
+  margin: 0;
+  height: 10px;
 }
+
 
 /* SIDEBAR */
 
