@@ -28,8 +28,6 @@ body {
   background: linear-gradient(43deg, black 65%, #c3cefc) no-repeat;
   display: flex;
   height: 100vh;
-  right: 0;
-  margin: 0;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -54,9 +52,9 @@ a {
 .main {
   color: white;
   font-family: "New Tegomin";
-  font-size: 30px;
+  font-size: 24px;
   top: 15%;
-  left: 40%;
+  left: 42.5%;
   position: absolute;
   text-align: center;
 }
@@ -109,12 +107,36 @@ a {
 
 /* COMMENTS */
 
+.comment-form {
+  position: absolute;
+  left: 36.2%;
+  text-align: center;
+  top: 30%;
+}
+
+.comment-form textarea {
+  color: #c3cefc;
+  background-color: rgba(195, 206, 252, .1);
+  box-shadow: -3px 3px 4px #c3cefc;
+  border: 1px solid black;
+}
+
+.comment-form .button {
+  background-color: #c3cefc;
+  border: none;
+}
+
 .comments {
-  width: 30%;
+  position: absolute;
+  width: 40%;
+  height: 60%;
+  top: 55%;
   margin: auto;
+  overflow: auto;
 }
 
 .comment {
+  margin: 5px;
   position: relative;
   box-shadow: -3px 3px 4px #c3cefc;
   padding-left: 4px;
@@ -122,18 +144,22 @@ a {
   min-height: 80px;
   list-style-type: none;
   color: white;
+  overflow: scroll;
 }
 
 .comment-author {
   color: #c3cefc;
   font-family: "New Tegomin";
   font-size: 16px;
+  position: absolute;
+  top: 10px;
+  left: 18px;
 }
 
 .comment-create {
   position: absolute;
   right: 4px;
-  bottom: 0;
+  top: 15px;
   font-size: 12px;
 }
 
@@ -141,7 +167,7 @@ a {
 /* SIDEBAR */
 
 sidebar {
-  width: 80px;
+  width: 5%;
   position: absolute;
   height: 100vh;
   left: 0;
