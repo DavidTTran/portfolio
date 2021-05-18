@@ -107,6 +107,7 @@ a {
 
 /* COMMENTS */
 
+
 .comment-form {
   position: absolute;
   left: 36.2%;
@@ -161,6 +162,11 @@ a {
   right: 4px;
   top: 15px;
   font-size: 12px;
+}
+
+.comment-badge a {
+  color: white;
+  position: relative;
 }
 
 

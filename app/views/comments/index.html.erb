@@ -26,6 +26,13 @@
           <ul class="comment-author">
             <%= comment.author.username %>
           </ul>
+          <div class="comment-badge">
+            <% current_user.oauths.order(:provider).each do |oauth| %>
+            <a href="<%= oauth.url %>">
+              <i class="fa fa-<%= oauth.provider %>"></i>
+            </a>
+            <% end %>
+          </div>
           <%= comment.body %>
           <div class="comment-create">
             <%= comment.created_at.strftime("%m/%d/%Y") %>
