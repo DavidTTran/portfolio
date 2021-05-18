@@ -8,16 +8,27 @@
   <body>
     <div class="main">
       <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a><br>
+      <!-- <a href="#">Login with Google</a><br>
+      <a href="#">Login with LinkedIn</a><br> -->
     </div>
+
+    <%= form_tag("/comment", method: :post, class: "comment-form") do %>
+      <%= text_area_tag(:body, "Got a comment?", size: "48x4") %><br>
+      <%= submit_tag "Post", class: "button" %>
+    <% end %>
+
     <div class="comments">
       <% @comments.each do |comment| %>
         <li class="comment">
+          <div>
+            <%= image_tag comment.author.avatar_url, style: "width: 40px; border-radius: 50%; padding: 5px;" %>
+          </div>
           <ul class="comment-author">
             <%= comment.author.username %>
           </ul>
           <%= comment.body %>
           <div class="comment-create">
-            <%= comment.created_at.to_date %>
+            <%= comment.created_at.strftime("%m/%d/%Y") %>
           </div>
       <% end %>
       </li>
