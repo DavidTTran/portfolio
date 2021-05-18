@@ -9,9 +9,7 @@ class WelcomeController < ApplicationController
   end
 
   def update
-    data = Visitor.new.oauth(params)
-
-    current_user.update(username: data[:login], avatar_url: data[:avatar_url])
-    redirect_to "/"
+    Visitor.new(current_user).oauth(params)
+    redirect_to "/comments"
   end
 end

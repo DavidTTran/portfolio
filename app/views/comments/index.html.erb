@@ -12,8 +12,8 @@
       <a href="#">Login with LinkedIn</a><br> -->
     </div>
 
-    <%= form_tag("/comment", method: :post, class: "comment-form") do %>
-      <%= text_area_tag(:body, "Got a comment?", size: "48x4") %><br>
+    <%= form_tag("/comments", method: :post, class: "comment-form") do %>
+      <%= text_area_tag :body, nil, placeholder: "Got a comment?", size: "48x4" %><br>
       <%= submit_tag "Post", class: "button" %>
     <% end %>
 
