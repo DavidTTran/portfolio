@@ -17,6 +17,12 @@ class Visitor
   private
 
   def update_visitor(data)
-    current_user.update(username: data[:login], avatar_url: data[:avatar_url])
+    new_data = {
+      username: data[:login],
+      avatar_url: data[:avatar_url],
+    }
+    
+    current_user.save_oauth("github", data[:html_url])
+    current_user.update(new_data)
   end
 end
