@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :visits, class_name: "Ahoy::Visit"
+  has_many :comments
 
   before_create :generate_username, :default_avatar
 
@@ -10,6 +11,6 @@ class User < ApplicationRecord
   end
 
   def default_avatar
-    self.avatar_url = "https://imgur.com/C91oByQ"
+    self.avatar_url = "https://i.imgur.com/C91oByQ.png"
   end
 end
