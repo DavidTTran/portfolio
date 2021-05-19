@@ -8,8 +8,7 @@
   <body>
     <div class="main">
       <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a><br>
-      <!-- <a href="#">Login with Google</a><br>
-      <a href="#">Login with LinkedIn</a><br> -->
+      <a href="#">Login with LinkedIn</a><br>
     </div>
 
     <%= form_tag("/comments", method: :post, class: "comment-form") do %>
@@ -28,7 +27,7 @@
           </ul>
           <div class="comment-badge">
             <% current_user.oauths.order(:provider).each do |oauth| %>
-            <a href="<%= oauth.url %>">
+            <a href="<%= oauth.url %>" target="_blank">
               <i class="fa fa-<%= oauth.provider %>"></i>
             </a>
             <% end %>
