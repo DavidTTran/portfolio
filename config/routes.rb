@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "/contact", to: "contact#index"
   get "/comments", to: "comments#index"
   post "/comments", to: "comments#create"
+
+  get '/auth/:provider/callback', to: 'welcome#update'
 end
