@@ -175,7 +175,7 @@ a {
 sidebar {
   width: 5%;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   left: 0;
   display: flex;
   justify-content: center;
