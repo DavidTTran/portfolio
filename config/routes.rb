@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   post "/comments", to: "comments#create"
 
   get '/auth/:provider/callback', to: 'welcome#update'
+  get 'auth/google_oauth2/callback', to: 'oauths#google_auth'
+  get 'auth/failure', to: 'oauths#error'
 end

@@ -8,6 +8,7 @@
   <body>
     <div class="main">
       <a href="https://github.com/login/oauth/authorize?client_id=<%= ENV["CLIENT_ID"] %>&scope=repo">Login with GitHub</a><br>
+      <%= link_to "Login with Google", controller: "oauths", action: "google_auth" %>
     </div>
 
     <%= form_tag("/comments", method: :post, class: "comment-form") do %>
