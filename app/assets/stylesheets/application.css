@@ -16,12 +16,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
-#logo {
-  width: 200px;
-  height: 200px;
-  opacity: 50%;
-  position: absolute;
-  left: 30%;
+:root {
+  --main-color: #c3cefc;
 }
 
 .gradient {
@@ -31,62 +27,80 @@
   background: linear-gradient(43deg, rgba(0, 0, 0, 0.7) 75%, #c3cefc) no-repeat;
 }
 
-body {
-  background: url("background.jpeg") no-repeat;
-  background-size: 100% 100%;
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.content {
+  width: 80%;
+  height: 100%;
+  padding-top: 8%;
+  margin: 0;
 }
 
-a {
-  color: #c3cefc;
-}
-
-.container:hover .title {
-  opacity: .2;
-}
-
-.container .title:hover {
-  opacity: 1;
-}
-
-.container .title:hover .info {
-  opacity: 1;
-}
-
-.main {
-  color: white;
+.header {
+  background: linear-gradient(to right, rgba(0,0,0,0.5), black, rgba(0,0,0,0.5));
   font-family: "New Tegomin";
-  font-size: 24px;
-  top: 15%;
-  left: 42.5%;
-  position: absolute;
-  text-align: center;
 }
 
-.notice {
-  color: white;
-  font-size: 13px;
-  transform: rotate(20deg);
-  position: absolute;
-  right: 0;
+.header .d-flex a {
+  padding: 0px;
+}
+
+.text-responsive {
+  font-size: calc(100% + 1vw + 1vh);
 }
 
 .title {
-  color: #c3cefc;
+  color: var(--main-color);
   font-family: "New Tegomin";
-  font-size: 50px;
-  width: 500px;
-  position: absolute;
+  font-size: 24px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 36px;
+  color: var(--main-color);
+  font-family: "New Tegomin";
   transition: 1s;
 }
 
+body {
+  background: url("background.jpeg") no-repeat;
+  background-size: 100% 100%;
+  right: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container:hover .subtitle {
+  opacity: .2;
+}
+
+.container .subtitle:hover {
+  opacity: 1;
+}
+
+.container .subtitle:hover .info {
+  opacity: 1;
+}
+
+.subtitle .hint {
+  color: white;
+  font-size: 13px;
+  transform: rotate(-20deg);
+  position: absolute;
+  left: 5%;
+}
+
+.activePage {
+  background-color: var(--main-color);
+  color: black !important;
+}
+
+.header .d-flex a {
+  padding: 10px;
+  color: var(--main-color)
+}
+
 .info {
-  position: relative;
-  text-align: left;
   right: 0;
   color: white;
   font-size: 16px;
@@ -95,179 +109,57 @@ a {
   transition: 1s;
 }
 
-.box-1 {
-  position: absolute;
-  top: 45%;
-  left: 40%;
-}
-
-.box-2 {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-}
-
-.box-3 {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-}
-
 /* COMMENTS */
 
 
 .comment-form {
-  position: absolute;
-  left: 36.2%;
   text-align: center;
-  top: 30%;
+  padding-top: 2%;
+  font-family: "New Tegomin";
 }
 
 .comment-form textarea {
-  color: #c3cefc;
+  color: var(--main-color);
   background-color: rgba(195, 206, 252, .1);
-  box-shadow: -3px 3px 4px #c3cefc;
+  box-shadow: -3px 3px 4px var(--main-color);
   border: 1px solid black;
 }
 
 .comment-form .button {
-  background-color: #c3cefc;
+  background-color: var(--main-color);
   border: none;
 }
 
 .comments {
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  top: 55%;
-  margin: auto;
-  overflow: auto;
+  height: 60%;
+  overflow-y: scroll;
 }
 
 .comment {
-  margin: 5px;
-  position: relative;
-  box-shadow: -3px 3px 4px #c3cefc;
-  padding-left: 4px;
-  padding-top: 1px;
-  min-height: 80px;
+  margin: 2%;
+  padding: 1%;
+  box-shadow: -3px 3px 4px var(--main-color);
+  min-height: 10%;
   list-style-type: none;
   color: white;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+.media-body {
+  font-size: 14px;
 }
 
 .comment-author {
-  color: #c3cefc;
+  color: var(--main-color);
   font-family: "New Tegomin";
-  font-size: 16px;
-  position: absolute;
-  top: 9px;
-  left: 18px;
+  font-size: 20px;
 }
 
 .comment-create {
-  position: absolute;
-  right: 4px;
-  top: 15px;
   font-size: 12px;
+  opacity: 60%;
 }
 
 .comment-badge a {
   color: white;
-  position: relative;
-}
-
-
-/* SIDEBAR */
-
-sidebar {
-  width: 5%;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 1px 0px 7px #c3cefc;
-}
-
-sidebar .logo {
-  position: absolute;
-  top: 0;
-  padding: 20px;
-}
-
-sidebar .menu {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-}
-
-sidebar a {
-  color: #c3cefc;
-  font-size: 25px;
-  padding: 20px;
-}
-
-/* Glitch Animation */
-
-.glitch-animation {
-  animation: glitch 1s linear infinite;
-}
-
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,255) skew(0deg);
-  }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
-  }
-  62%{
-    transform: translate(0,0) skew(5deg);
-  }
-}
-
-div:before,
-div:after{
-  content: attr(title);
-  position: absolute;
-  left: 0;
-}
-
-div:before{
-  animation: glitchTop 1s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
-  }
-  4%,60%{
-    transform: translate(-2px,2px);
-  }
-  62%{
-    transform: translate(13px,-1px) skew(-13deg);
-  }
-}
-
-div:after{
-  animation: glitchBotom 1.5s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
-  }
-  4%,60%{
-    transform: translate(-2px,0);
-  }
-  62%{
-    transform: translate(-22px,5px) skew(21deg);
-  }
 }
