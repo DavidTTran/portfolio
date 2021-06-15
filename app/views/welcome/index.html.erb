@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="application.css">
+  </head>
+
   <body>
-    <div class="container">
-      <div class="main">
-        Welcome <%= @visitor.current_user.username %>!
-        <div class="visitors">
+    <div class="container content">
+      <div class="d-flex justify-content-center">
+        <div class="title">
+          Welcome <%= @visitor.current_user.username %>!<br>
           <%= @visitor.count_of_visitors %> unique visitors.<br>
           <a href="https://github.com/DavidTTran/portfolio" target="_blank">View the code for this site!</a>
         </div>
       </div>
-      <div class="title box-1">
-        <div class="notice">
-          Hover over me!
-        </div>
-        <div class="glitch-animation" title="Under Construction">
+      <div class="d-flex p-2">
+        <div class="subtitle">
+          <span class="hint">
+            Hover over me!
+          </span>
           Under Construction
-        </div>
-        <div class="info">
-          First and foremost - I'm a junior backend engineer, with few presentable projects of my own to speak for. I can (and have) spent hours fiddling with CSS for lackluster results. So, instead, I opted for functionality on this portfolio site. Such as identifying unique users, GitHub oauth, and comments.<br><br>
+          <div class="info">
+            First and foremost - I'm a junior backend engineer, with few presentable projects of my own to speak for. I can (and have) spent hours fiddling with CSS for lackluster results. So, instead, I opted for functionality on this portfolio site. Such as identifying unique users, GitHub oauth, and comments.<br><br>
 
-          Next, I want to incorporate LinkedIn/Google/Facebook/Twitter oauth, comment CRUD functionality, <a href="https://beta.openai.com/docs/introduction/key-concepts" target="_blank">OpenAI</a>, and to redo the html with Bootstrap - allowing the screen and elements to be resizeable.
-
-          (Fullscreen for best results.)
+            Next, I want to incorporate LinkedIn/Google/Facebook/Twitter oauth, comment CRUD functionality, <a href="https://beta.openai.com/docs/introduction/key-concepts" target="_blank">OpenAI</a>, and to redo the html with Bootstrap - allowing the screen and elements to be resizeable.
+          </div>
         </div>
       </div>
     </div>
